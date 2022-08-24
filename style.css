@@ -1,0 +1,56 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.forhead{
+    background-color: gray;
+    font-size: 50px;
+    height: 140px;
+    padding-top: 2%;
+    font-family: cursive;
+    text-shadow:  0px 3px 3px black;
+    color: white;
+    
+}
+.myNav{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.myNav ul li a{
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;    
+    color: white;
+    font-size: 20px;
+
+}
+
+.myNav ul li {
+    text-decoration: none;   
+    color: white;
+    font-size: 20px;
+    padding: 8px;
+
+}
+.myNav ul li:hover {
+    background-color: gray;
+
+}
+.left{
+    background-color: rgb(231, 231, 231);
+    height: 900px;
+    padding: 20px;
+
+}
+.main{
+    height: 900px;
+    padding: 20px;
+
+
+}
+.fakeimg{
+    background-color: white;
+    background-image: url('../01_08_2022/pics/img_forest.jpg');
+}

@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+/*1th step */ 
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/*2th step */ 
+body{
+display: flex;
+background-color: gray;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+
+}
+/*3th step */ 
+.wrapper{
+font-family: 'Courier New', Courier, monospace;
+font-weight: bolder;
+font-size: 80px;
+display: inline-flex;
+}
+/*4th step */ 
+.dynamic-text{
+height: 90px;
+line-height: 90px;
+/*2th step keep the over flow unhiddn 
+overflow: hidden;
+*/ 
+overflow: hidden;
+
+}
+/*5th step */ 
+.dynamic-text ul{
+list-style-type: none;
+margin-left: 20px;
+}
+
+/*6th step */
+.dynamic-text ul li{
+position: relative;
+top: 0;
+/* 10th steps*/
+animation: slides 14s steps(4) infinite;
+}
+@keyframes slides {
+100%{
+top: -360px;
+}
+}
+
+
+/*7th step */ 
+.dynamic-text ul li span{
+position: relative;
+color: white;
+}
+/* 8th Step*/
+.dynamic-text ul li span::after{
+content: " ";
+position: absolute;
+height: 100%;
+width: 100%;
+border-left: 4px solid white;
+left: 0;
+overflow: hidden;
+background-color: gray   ;
+/*calling animation function */
+animation: typing 1.6s steps(9) infinite alternate;
+}
+/* 9th steps*/
+@keyframes typing {
+100%{
+left: 100%;
+margin: 0 -35px 0 35px;
+} 
+}
+
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div class="static-text">I'm a</div>
+<div class="dynamic-text">
+<ul>
+<li><span>Designer</span></li>
+<li><span>Developer</span></li>
+<li><span>Trainer</span></li>
+<li><span>Athleth</span></li>
+</ul>
+</div>
+</div>
+</body>
+</html>
